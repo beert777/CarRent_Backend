@@ -15,7 +15,7 @@ import java.io.IOException;
 @Slf4j
 public class FileUploadServiceImpl implements FileUploadService {
 
-    private static final String IMAGE_SERVER_URL = "https://wieczarekaleksander.pl";
+    private static final String IMAGE_SERVER_URL = "#";
 
     @Override
     public ResultInfo fileUpload(String localPath, String fileName) throws IOException {

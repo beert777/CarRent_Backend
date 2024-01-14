@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import pbs.edu.CarRent.dto.UserUpdateDTO;
 import pbs.edu.CarRent.model.User;
 import pbs.edu.CarRent.repository.UserRepository;
-import pbs.edu.CarRent.security.services.UserService;
+import pbs.edu.CarRent.service.UserService;
 
 import java.util.Optional;
 

@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import pbs.edu.CarRent.model.*;
 import pbs.edu.CarRent.repository.ReservationRepository;
-import pbs.edu.CarRent.security.services.UserService;
+import pbs.edu.CarRent.service.UserService;
 import pbs.edu.CarRent.service.ReservationService;
 import pbs.edu.CarRent.service.SalonService;
 

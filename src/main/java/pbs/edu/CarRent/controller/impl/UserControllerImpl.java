@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import pbs.edu.CarRent.controller.UserController;
 import pbs.edu.CarRent.dto.UserUpdateDTO;
 import pbs.edu.CarRent.model.User;
-import pbs.edu.CarRent.security.services.UserService;
+import pbs.edu.CarRent.service.UserService;
 
 
 @RestController

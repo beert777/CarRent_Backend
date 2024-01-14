@@ -16,12 +16,12 @@ import java.io.InputStream;
 public class FtpUtil {
     ResultInfo resultInfo = new ResultInfo();
     public FTPClient ftpClient = new FTPClient();
-    public static final String HOSTNAME = "alewie.atthost24.pl";
+    public static final String HOSTNAME = "#";
     //ftp Server port number
     public static final int PORT = 21;
     // Sign in ftp User name and password of the server
-    public static final String USERNAME = "alewie";
-    public static final String PWD = "Gl7!$x9tcw39*\n";
+    public static final String USERNAME = "#";
+    public static final String PWD = "#";
     //ftpuser The base directory of
 // All users' files are in this directory
 // public static final String BASEPATH = "/var/ftp/test";

@@ -6,7 +6,7 @@ import pbs.edu.CarRent.model.Employee;
 import pbs.edu.CarRent.model.Salon;
 import pbs.edu.CarRent.model.User;
 import pbs.edu.CarRent.repository.EmployeeRepository;
-import pbs.edu.CarRent.security.services.UserService;
+import pbs.edu.CarRent.service.UserService;
 import pbs.edu.CarRent.service.EmployeeService;
 import pbs.edu.CarRent.service.SalonService;
 
