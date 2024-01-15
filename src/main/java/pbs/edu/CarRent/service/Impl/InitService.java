@@ -173,20 +173,20 @@ public class InitService {
         Employee e3 = employeeRepository.save(new Employee(0l, u15, s3));
 
         // samochody
-        Car c1 = carRepository.save(new Car(0l, "Passat", "2012, czerwony", "Volkswagen", null, s1, true));
-        Car c2 = carRepository.save(new Car(0l, "Corolla", "2016, srebrny", "Toyota", null, s1, true));
-        Car c3 = carRepository.save(new Car(0l, "Yaris", "2010, niebieski", "Toyota", null, s1, true));
-        Car c4 = carRepository.save(new Car(0l, "Octavia", "2013, czarny", "Skoda", null, s1, true));
-        Car c5 = carRepository.save(new Car(0l, "Duster", "2016, zielony", "Dacia", null, s1, true));
-        Car c6 = carRepository.save(new Car(0l, "Fabia", "2015, czerwony", "Skoda", null, s2, true));
-        Car c7 = carRepository.save(new Car(0l, "Sportage", "2019, niebieski", "Kia", null, s2, true));
-        Car c8 = carRepository.save(new Car(0l, "Golf", "2010, granatowy", "Volkswagen", null, s2, true));
-        Car c9 = carRepository.save(new Car(0l, "Corsa", "2011, niebieski", "Opel", null, s2, true));
-        Car c10 = carRepository.save(new Car(0l, "Zafira", "2016, czarny", "Opel", null, s2, true));
-        Car c11 = carRepository.save(new Car(0l, "X3", "2020, czarny", "BMW", null, s3, true));
-        Car c12 = carRepository.save(new Car(0l, "C3", "2018, zielony", "Citroen", null, s3, true));
-        Car c13 = carRepository.save(new Car(0l, "Leon", "2011, srebrny", "Seat", null, s3, true));
-        Car c14 = carRepository.save(new Car(0l, "I20", "2017, czarny", "Hyundai", null, s3, true));
-        Car c15 = carRepository.save(new Car(0l, "Q3", "2020, czarny", "Audi", null, s3, true));
+        Car c1 = carRepository.save(new Car(0l, "Passat", "2012, czerwony", "Volkswagen", "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/VW_Passat_B7_FW_Dresden.jpg/1200px-VW_Passat_B7_FW_Dresden.jpg?20150825082853", s1, true));
+        Car c2 = carRepository.save(new Car(0l, "Corolla", "2016, srebrny", "Toyota", "https://upload.wikimedia.org/wikipedia/commons/2/2f/2022_Toyota_Corolla_L_in_Classic_Silver_Metallic%2C_Front_Right%2C_03-20-2022.jpg", s1, true));
+        Car c3 = carRepository.save(new Car(0l, "Yaris", "2010, niebieski", "Toyota", "https://scene7.toyota.eu/is/image/toyotaeurope/Toyota_Yaris_854x480_1-2:Medium-Landscape?ts=0&resMode=sharp2&op_usm=1.75,0.3,2,0", s1, true));
+        Car c4 = carRepository.save(new Car(0l, "Octavia", "2013, czarny", "Skoda", "https://imgd.aeplcdn.com/1280x720/cw/ec/24333/Exterior-77792.jpg?wm=0", s1, true));
+        Car c5 = carRepository.save(new Car(0l, "Duster", "2016, zielony", "Dacia", "https://francuskie.pl/wp-content/uploads/2023/03/dacia-duster-extreme-2023.jpg", s1, true));
+        Car c6 = carRepository.save(new Car(0l, "Fabia", "2015, czerwony", "Skoda", "https://d-art.ppstatic.pl/kadry/k/r/1/4f/5e/624b677f36866_o_full.jpg", s2, true));
+        Car c7 = carRepository.save(new Car(0l, "Sportage", "2019, niebieski", "Kia", "https://centrum.auto.pl/wp-content/uploads/KIA-Sportage-Business-Line-1.6-Benzyna-SUV-Niebieski-Metalik-K413205AC.jpg", s2, true));
+        Car c8 = carRepository.save(new Car(0l, "Golf", "2010, granatowy", "Volkswagen", "https://lh3.googleusercontent.com/proxy/SMjmjjxKizIptMKOCZyG5mA35aC6pYUCvTy2AMYKYZgFklsWK7o2KsBHK6kUEkYvCJUAdFVPdujS3ERe8cBIixf9xOKlKbDfm9wbGkVTUPI", s2, true));
+        Car c9 = carRepository.save(new Car(0l, "Corsa", "2011, niebieski", "Opel", "https://dixi-car.pl/foto/galeria/nowa-corsa/opel-corsa-opc-d.jpg", s2, true));
+        Car c10 = carRepository.save(new Car(0l, "Zafira", "2016, czarny", "Opel", "https://upload.wikimedia.org/wikipedia/commons/5/5b/Opel_Zafira_B_1.8_Facelift_Saphirschwarz.JPG", s2, true));
+        Car c11 = carRepository.save(new Car(0l, "X3", "2020, czarny", "BMW", "https://imgd.aeplcdn.com/370x208/n/g8c77ua_1552953.jpg?q=80", s3, true));
+        Car c12 = carRepository.save(new Car(0l, "C3", "2018, zielony", "Citroen", "https://m.atcdn.co.uk/vms/media/737fb39dea3542639a593e5c0782fd4b.jpg", s3, true));
+        Car c13 = carRepository.save(new Car(0l, "Leon", "2011, srebrny", "Seat", "https://images.ams.bg/images/galleries/112997/seat-leon-1461074528_big.jpg", s3, true));
+        Car c14 = carRepository.save(new Car(0l, "I20", "2017, czarny", "Hyundai", "https://s7g10.scene7.com/is/image/hyundaiautoever/Hyundai_i20_PhantomBlackPearl_X5B", s3, true));
+        Car c15 = carRepository.save(new Car(0l, "Q3", "2020, czarny", "Audi", "https://superauto.wpcdn.pl/offer_photos/094482d612f7ef3e186609dd40df61fd.jpg", s3, true));
     }
 }
