@@ -9,7 +9,7 @@ import pbs.edu.CarRent.dto.UserUpdateDTO;
 import pbs.edu.CarRent.model.User;
 import pbs.edu.CarRent.service.UserService;
 
-
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @AllArgsConstructor
 @RequestMapping("/api/v1")

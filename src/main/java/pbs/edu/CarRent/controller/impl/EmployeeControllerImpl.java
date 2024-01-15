@@ -11,6 +11,7 @@ import pbs.edu.CarRent.service.EmployeeService;
 
 import java.util.List;
 
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @AllArgsConstructor
 @RequestMapping("/api/v1")

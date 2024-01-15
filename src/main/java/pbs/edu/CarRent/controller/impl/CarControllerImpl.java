@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,6 +15,9 @@ import pbs.edu.CarRent.service.CarService;
 
 import java.util.List;
 
+
+
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @AllArgsConstructor
 @RequestMapping("/api/v1")

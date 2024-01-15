@@ -2,15 +2,12 @@ package pbs.edu.CarRent.controller.impl;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import pbs.edu.CarRent.controller.ContactController;
 import pbs.edu.CarRent.model.Contact;
 import pbs.edu.CarRent.service.MailService;
 
-
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @AllArgsConstructor
 @RequestMapping("/api/v1")
