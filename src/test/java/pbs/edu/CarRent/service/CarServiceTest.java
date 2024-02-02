@@ -80,11 +80,6 @@ public class CarServiceTest {
         Optional<Car> result = carService.getCarById(carId);
         assertEquals(Optional.of(car), result);
     }
-    /* Dla potomnych
-    @Test
-    public void testAddNewCar(){
-        //
-    }*/
     @Test
     public void testUpdateCar(){
         Long carId = 1L;
