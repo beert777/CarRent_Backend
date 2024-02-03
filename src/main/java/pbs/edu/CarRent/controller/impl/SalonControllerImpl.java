@@ -25,25 +25,21 @@ public class SalonControllerImpl implements SalonController {
     public ResponseEntity<List<Salon>> getSalons() {
         return ResponseEntity.ok(salonService.getSalons());
     }
-
     @Override
     @GetMapping("/salons/{id}")
     public ResponseEntity<Salon> getSalonById(@PathVariable Long id) {
         return ResponseEntity.of(salonService.getSalonById(id));
     }
-
     @Override
     @PatchMapping("/salons/{id}")
     public ResponseEntity<Salon> updateSalon(@PathVariable Long id, @RequestBody Salon salon) {
         return ResponseEntity.of(salonService.updateSalon(id, salon));
     }
-
     @Override
     @PostMapping("/salons")
     public ResponseEntity<Salon> addNewSalon(@RequestBody Salon salon) {
         return ResponseEntity.of(salonService.addNewSalon(salon));
     }
-
     @Override
     @DeleteMapping("/salons/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)

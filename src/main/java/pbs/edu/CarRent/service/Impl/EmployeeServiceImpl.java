@@ -26,13 +26,11 @@ public class EmployeeServiceImpl implements EmployeeService {
     public Optional<Employee> getEmployeeById(Long id) {
         return employeeRepository.findById(id);
     }
-
     @Override
     public Optional<Employee> getEmployeeByUserId(Long id) {
         User user = userService.getUserById(id).orElseThrow(NoSuchElementException::new);
         return employeeRepository.findByUser(user);
     }
-
     @Override
     public List<Employee> getEmployees() {
         return employeeRepository.findAll();

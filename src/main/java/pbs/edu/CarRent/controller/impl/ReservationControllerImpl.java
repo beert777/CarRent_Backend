@@ -34,13 +34,11 @@ public class ReservationControllerImpl implements ReservationController {
     public ResponseEntity<List<Reservation>> getReservationBySalonStart(@PathVariable Long salonId) {
         return ResponseEntity.ok(reservationService.getReservationBySalonStart(salonId));
     }
-
     @Override
     @GetMapping("/reservations/salon/end/{salonId}")
     public ResponseEntity<List<Reservation>> getReservationBySalonEnd(@PathVariable Long salonId) {
         return ResponseEntity.ok(reservationService.getReservationBySalonEnd(salonId));
     }
-
     @Override
     @GetMapping("/reservations/user/{userId}")
     public ResponseEntity<List<Reservation>> getReservationByUser(@PathVariable Long userId) {
@@ -52,19 +50,16 @@ public class ReservationControllerImpl implements ReservationController {
     public ResponseEntity<Reservation> getReservation(@PathVariable Long id) {
         return ResponseEntity.of(reservationService.getReservationById(id));
     }
-
     @Override
     @PostMapping("/reservation")
     public ResponseEntity<Reservation> addReservation(@RequestBody Reservation reservation) {
         return ResponseEntity.of(reservationService.addReservation(reservation));
     }
-
     @Override
     @PatchMapping("/reservation/status/{id}")
     public ResponseEntity<Reservation> updateReservationStatus(@PathVariable Long id, @RequestBody ReservationState reservationState) {
         return ResponseEntity.of(reservationService.updateReservationStatus(id, reservationState));
     }
-
     @Override
     @PatchMapping("/reservation/end/{id}")
     public ResponseEntity<Reservation> updateEndDate(@PathVariable Long id, @RequestBody Date end_date) {
@@ -75,7 +70,6 @@ public class ReservationControllerImpl implements ReservationController {
     public ResponseEntity<Reservation> endReservation(@PathVariable Long id, @RequestBody Employee employee) {
         return ResponseEntity.of(reservationService.endReservation(id, employee));
     }
-
     @Override
     @DeleteMapping("/reservation/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)

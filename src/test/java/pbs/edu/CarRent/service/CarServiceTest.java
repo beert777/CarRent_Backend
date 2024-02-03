@@ -5,16 +5,10 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.MediaType;
-import org.springframework.mock.web.MockMultipartFile;
-import org.springframework.web.multipart.MultipartFile;
 import pbs.edu.CarRent.model.Car;
 import pbs.edu.CarRent.model.Salon;
 import pbs.edu.CarRent.repository.CarRepository;
-import pbs.edu.CarRent.service.CarService;
 import pbs.edu.CarRent.service.Impl.CarServiceImpl;
-import pbs.edu.CarRent.service.SalonService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +19,6 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 public class CarServiceTest {
-
     @Mock
     private CarRepository carRepository;
     @Mock
@@ -37,7 +30,6 @@ public class CarServiceTest {
     public void setUp() {
         MockitoAnnotations.initMocks(this);
     }
-
     @Test
     public void testGetCars(){
         List<Car> cars = new ArrayList<>();

@@ -24,26 +24,21 @@ public class Reservation {
     @Enumerated(EnumType.STRING)
     private ReservationState state;
     private Date expectedEndDate;
-
     @ManyToOne
     @JoinColumn(name="idUser")
     private User userReservation;
-
     @ManyToOne
     @JoinColumn(name="idCar")
     private Car carReservation;
-
     @ManyToOne
     @JoinColumn(name="idSalonStart")
     private Salon salonStart;
     @ManyToOne
     @JoinColumn(name="idSalonEnd")
     private Salon salonEnd;
-
     @ManyToOne
     @JoinColumn(name="idEmployeeStart")
     private Employee employeeStart;
-
     @ManyToOne
     @JoinColumn(name="idEmployeeEnd")
     private Employee employeeEnd;

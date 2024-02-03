@@ -9,10 +9,7 @@ import pbs.edu.CarRent.model.Employee;
 import pbs.edu.CarRent.model.Salon;
 import pbs.edu.CarRent.model.User;
 import pbs.edu.CarRent.repository.EmployeeRepository;
-import pbs.edu.CarRent.service.EmployeeService;
 import pbs.edu.CarRent.service.Impl.EmployeeServiceImpl;
-import pbs.edu.CarRent.service.SalonService;
-import pbs.edu.CarRent.service.UserService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,24 +20,18 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 public class EmployeeServiceTest {
-
     @Mock
     private EmployeeRepository employeeRepository;
-
     @Mock
     private SalonService salonService;
-
     @Mock
     private UserService userService;
-
     @InjectMocks
     private EmployeeServiceImpl employeeService;
-
     @BeforeEach
     public void setUp() {
         MockitoAnnotations.initMocks(this);
     }
-
     @Test
     public void testGetEmployeeById(){
         Long employeeId = 1L;

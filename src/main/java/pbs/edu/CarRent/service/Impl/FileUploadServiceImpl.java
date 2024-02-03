@@ -31,8 +31,6 @@ public class FileUploadServiceImpl implements FileUploadService {
 
         FileInputStream inputStream = new FileInputStream(new File(localPath));
 
-
-
         Boolean isChangeUserSuccess = ftpUtil.changeWorkingDirectory(userid);
         if (!isChangeUserSuccess){
             log.error("FTP :: Nie udało się przełączyć katalogu użytkownika, katalog użytkownika nie istnieje, najpierw utwórz katalog użytkownika");
@@ -41,7 +39,7 @@ public class FileUploadServiceImpl implements FileUploadService {
         Boolean isStoreFile = ftpUtil.storeFile(fileName, inputStream,userid);
         String  s= ftpUtil.printWorkingDirectory();
         s = s.replace("\\\\", "/");
-        s = s.replace("/websites/aleksanderwieczarek", IMAGE_SERVER_URL);
+        s = s.replace("/websites", IMAGE_SERVER_URL);
         resultInfo.setPathFolder(s);
         if(!isStoreFile){
             log.error("FTP :: " +

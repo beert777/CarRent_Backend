@@ -4,9 +4,6 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.Size;
 
 public class UserUpdateDTO {
-    //dodać auth
-
-
     public String getFirstName() {
         return firstName;
     }

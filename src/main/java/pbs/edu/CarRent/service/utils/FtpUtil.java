@@ -51,20 +51,20 @@ public class FtpUtil {
 
     public Boolean changeWorkingDirectory(String userPath) throws IOException {
 
-        boolean b = ftpClient.changeWorkingDirectory("/websites/aleksanderwieczarek/"+userPath);
+        boolean b = ftpClient.changeWorkingDirectory("/websites/"+userPath);
         return b ;
     }
     /** * @className FtpUtil * @author dnydys * @description Create user directory false Indicates that the user directory already exists * @updateTime 2021/12/17 21:59 * @return: java.lang.Boolean * @version 1.0 */
     public Boolean makeDirectory(String userid) throws IOException {
 
-        boolean b = ftpClient.makeDirectory("/websites/aleksanderwieczarek/"+userid);
-        System.out.println("@@@@@Folder"+"/websites/aleksanderwieczarek/"+userid);
+        boolean b = ftpClient.makeDirectory("/websites/"+userid);
+        System.out.println("@@@@@Folder"+"/websites/"+userid);
         return b;
     }
     /** * @className FtpUtil * @author dnydys * @description 1. The name of the file saved on the server side ,2. Of uploaded files inputstream * @updateTime 2021/12/17 22:24 * @return: java.lang.Boolean * @version 1.0 */
     public Boolean storeFile(String filename, FileInputStream inputStream,String userID) throws IOException {
 
-        return ftpClient.storeFile("/websites/aleksanderwieczarek/"+userID+"/"+filename,inputStream);
+        return ftpClient.storeFile("/websites/"+userID+"/"+filename,inputStream);
 
     }
     /** * @className FtpUtil * @author dnydys * @description Print the user's current directory * @updateTime 2021/12/18 9:59 * @return: java.lang.String * @version 1.0 */

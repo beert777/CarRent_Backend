@@ -28,7 +28,6 @@ public class CarServiceImpl implements CarService {
     private final FileUploadService fileUploadService;
     private final SalonService salonService;
 
-
     @Override
     public List<Car> getCars() {
         return carRepository.findAll();
@@ -66,22 +65,18 @@ public class CarServiceImpl implements CarService {
         if (!file.isEmpty()) {
             try {
                 byte[] bytes = file.getBytes();
-
                 // Creating the directory to store file
                 String rootPath = System.getProperty("user.home");
                 File dir = new File(rootPath + File.separator + "tmpFiles");
                 if (!dir.exists()) {
                     dir.mkdirs();
                 }
-
                 // Create the file on server
                 File serverFile = new File(dir.getAbsolutePath() + File.separator + fileName);
                 BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(serverFile));
                 stream.write(bytes);
                 stream.close();
-
                 System.out.println("Server File Location=" + serverFile.getAbsolutePath());
-
 
                 resultInfo = fileUploadService.fileUpload(serverFile.getAbsolutePath(), file.getOriginalFilename());
                 serverFile.delete();

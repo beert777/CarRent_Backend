@@ -8,8 +8,6 @@ import org.mockito.MockitoAnnotations;
 import pbs.edu.CarRent.model.*;
 import pbs.edu.CarRent.repository.ReservationRepository;
 import pbs.edu.CarRent.service.Impl.ReservationServiceImpl;
-import pbs.edu.CarRent.service.SalonService;
-import pbs.edu.CarRent.service.UserService;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -22,19 +20,14 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 public class ReservationServiceTest {
-
     @Mock
     private ReservationRepository reservationRepository;
-
     @Mock
     private SalonService salonService;
-
     @Mock
     private UserService userService;
-
     @InjectMocks
     private ReservationServiceImpl reservationService;
-
     @BeforeEach
     public void setUp() {
         MockitoAnnotations.initMocks(this);
