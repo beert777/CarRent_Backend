@@ -15,5 +15,7 @@ public interface CarService {
     Optional<Car> getCarById(Long id);
     Optional<Car> addNewCar(Car car, MultipartFile fileName);
     Optional<Car> updateCar(Long id, Car car);
+    Optional<Car> setCarStatus(Long id, Boolean status);
+
     void deleteCar(Long id);
 }

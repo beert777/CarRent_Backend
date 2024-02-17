@@ -1,6 +1,7 @@
 package pbs.edu.CarRent.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import pbs.edu.CarRent.model.Car;
 import pbs.edu.CarRent.model.Reservation;
 import pbs.edu.CarRent.model.Salon;
 import pbs.edu.CarRent.model.User;
@@ -15,6 +16,7 @@ public interface ReservationRepository extends JpaRepository<Reservation, Long> 
 
     List<Reservation> findReservationsBySalonEnd(Salon salon);
 
+    List<Reservation> findReservationsByCarReservation(Car car);
     Reservation findReservationById(Long id);
 }
 

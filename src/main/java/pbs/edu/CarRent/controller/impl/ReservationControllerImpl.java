@@ -66,6 +66,16 @@ public class ReservationControllerImpl implements ReservationController {
         return ResponseEntity.of(reservationService.updateEndDate(id, end_date));
     }
     @Override
+    @PatchMapping("/reservation/start/{id}")
+    public ResponseEntity<Reservation> startReservation(@PathVariable Long id){
+        return ResponseEntity.of(reservationService.startReservation(id));
+    }
+    @Override
+    @PatchMapping("/reservation/cancel/{id}")
+    public ResponseEntity<Reservation> cancelReservation(@PathVariable Long id){
+        return ResponseEntity.of(reservationService.cancelReservation(id));
+    }
+    @Override
     @PatchMapping("/reservation/done/{id}")
     public ResponseEntity<Reservation> endReservation(@PathVariable Long id, @RequestBody Employee employee) {
         return ResponseEntity.of(reservationService.endReservation(id, employee));

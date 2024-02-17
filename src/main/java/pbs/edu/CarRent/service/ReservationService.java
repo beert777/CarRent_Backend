@@ -19,6 +19,11 @@ public interface ReservationService {
     Optional<Reservation> getReservationById(Long id);
     Optional<Reservation> updateReservationStatus(Long id, ReservationState reservationState);
     Optional<Reservation> updateEndDate(Long id, Date end_date);
+
+    Optional<Reservation> startReservation(Long id);
+
+    Optional<Reservation> cancelReservation(Long id);
+
     Optional<Reservation> endReservation(Long id, Employee employee);
 
     void deleteReservation(Long id);

@@ -55,7 +55,6 @@ public class CarServiceImpl implements CarService {
         return carRepository.findById(id);
     }
 
-
     @Override
     public Optional<Car> addNewCar(Car car, MultipartFile file) {
 
@@ -117,6 +116,13 @@ public class CarServiceImpl implements CarService {
         return Optional.of(carRepository.save(newCar));
     }
 
+    @Override
+    public Optional<Car> setCarStatus(Long id, Boolean status){
+        Car car = carRepository.findById(id).orElseThrow(NoSuchElementException::new);
+        car.setAvailable(status);
+        return Optional.of(carRepository.save(car));
+
+    }
     @Override
     public void deleteCar(Long id) {
         carRepository.deleteById(id);
